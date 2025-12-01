@@ -2,6 +2,12 @@ import { works } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
+export async function generateStaticParams() {
+  return works.map((work) => ({
+    id: work.id,
+  }));
+}
+
 export default async function WorkDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const work = works.find((w) => w.id === id);
