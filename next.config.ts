@@ -1,12 +1,15 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
-  output: "export",  // 启用静态导出
+  output: "export",
   images: {
-    unoptimized: true, // GitHub Pages 不支持默认的图片优化
+    unoptimized: true,
   },
-  basePath: "/yangzi", // 对应你的仓库名
-  assetPrefix: "/yangzi/", // 静态资源路径前缀
+  // 只有在生产环境构建时才启用 basePath 和 assetPrefix
+  basePath: isProd ? "/yangzi" : "",
+  assetPrefix: isProd ? "/yangzi/" : "",
 };
 
 export default nextConfig;

@@ -6,7 +6,7 @@ import { stats, news, highlights } from '@/lib/data';
 
 export default function Home() {
   return (
-    <div className="pt-16 md:pt-20">
+    <div className="min-h-screen">
       <HeroBanner />
       <StatsOverview stats={stats} />
       <NewsTicker news={news} />

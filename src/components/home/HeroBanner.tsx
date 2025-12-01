@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 const bannerImages = [
   {
     id: 1,
-    src: '/images/works/shengmingshu.jpg',
+    src: '/images/banner/shengmingshubanner.jpg',
     title: 'BORN TO BE ALIVE',
     subtitle: '生命树',
     tag: 'UPCOMING',
@@ -13,7 +13,7 @@ const bannerImages = [
   },
   {
     id: 2,
-    src: '/images/banner/banner2.jpg',
+    src: '/images/brands/valentino.jpg',
     title: 'VALENTINO AMBASSADOR',
     subtitle: '品牌代言人 · 时尚',
     tag: 'FASHION',
@@ -21,7 +21,7 @@ const bannerImages = [
   },
   {
     id: 3,
-    src: '/images/banner/banner3.jpg',
+    src: '/images/works/guosefanghua.jpg',
     title: 'FLOURISHED PEONY',
     subtitle: '国色芳华',
     tag: 'TOP DRAMA',
@@ -101,7 +101,7 @@ export default function HeroBanner() {
       </div>
 
       {/* Controls */}
-      <div className="absolute bottom-10 right-4 md:right-16 z-40 flex items-center space-x-6">
+      <div className="absolute bottom-32 md:bottom-40 right-4 md:right-16 z-40 flex items-center space-x-6">
         {/* Slide Indicators */}
         <div className="flex items-center space-x-2">
           {bannerImages.map((_, index) => (
@@ -127,7 +127,7 @@ export default function HeroBanner() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-30 animate-bounce hidden md:block">
+      <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 z-30 animate-bounce hidden md:block">
         <div className="w-[1px] h-16 bg-gradient-to-b from-transparent via-neon-purple to-transparent" />
       </div>
     </div>
